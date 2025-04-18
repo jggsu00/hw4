@@ -21,7 +21,7 @@ class MessageBoardApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Message Board App',
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),

@@ -26,11 +26,48 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Message Board App',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.redAccent,
+              Colors.orangeAccent,
+              Colors.teal,
+              Colors.pinkAccent,
+              Colors.deepPurpleAccent,
+            ],
+            stops: [0.0, 0.25, 0.5, 0.75, 1.0],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              Text(
+                'Message Boards',
+                style: TextStyle(
+                  fontSize: 36,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black45,
+                      offset: Offset(2, 2),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 24),
+              CircularProgressIndicator(
+                color: Colors.white,
+              ),
+            ],
+          ),
         ),
       ),
     );
